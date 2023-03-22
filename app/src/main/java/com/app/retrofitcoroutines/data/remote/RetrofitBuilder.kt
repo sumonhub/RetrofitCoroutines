@@ -7,12 +7,11 @@ object RetrofitBuilder {
 
     private const val BASE_URL = "https://5e510330f2c0d300147c034c.mockapi.io/"
 
-    private fun getRetrofit(): Retrofit {
+    fun getRemoteDataService(): RemoteDataService {
+        // create retrofit client
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .build()
+            .build().create(RemoteDataService::class.java)
     }
-
-    val apiService: ApiService = getRetrofit().create(ApiService::class.java)
 }

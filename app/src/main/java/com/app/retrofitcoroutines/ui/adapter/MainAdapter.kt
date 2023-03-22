@@ -9,6 +9,7 @@ import com.app.retrofitcoroutines.databinding.ItemLayoutBinding
 import com.bumptech.glide.Glide
 import com.mindorks.retrofit.coroutines.data.model.User
 import com.app.retrofitcoroutines.ui.adapter.MainAdapter.DataViewHolder
+import retrofit2.Response
 
 class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<DataViewHolder>() {
 
@@ -44,6 +45,5 @@ class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<Dat
             clear()
             addAll(users)
         }
-
     }
 }
